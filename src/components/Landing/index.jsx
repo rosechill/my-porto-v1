@@ -104,9 +104,9 @@ const index = () => {
         
       <ImageHero/>
 
-        <h2 className="absolute bottom-0 text-[#F5F5F5]  text-xs z-50">
+        {/* <h2 className="absolute bottom-0 text-[#F5F5F5]  text-xs z-50">
           sorry about this page
-        </h2>
+        </h2> */}
       </div>
       
       {/* styling */}
