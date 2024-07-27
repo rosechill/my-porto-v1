@@ -60,10 +60,18 @@ const Index = () => {
   };
 
   return (
-    <div id="section3" className="h-full bg-[#F5F5F5] w-screen text-center overflow-hidden">
+    <div
+      id="section3"
+      className="h-full bg-[#F5F5F5] w-screen text-center overflow-hidden"
+    >
       <div className="w-full pt-5 pb-10 flex gap-4 justify-center items-center">
         <div className="w-3/12 h-[4px] bg-red-700"></div>
-        <h2 ref={sertifRef} className="sertif-transition text-5xl w-auto text-red-500 z-10">Certificate</h2>
+        <h2
+          ref={sertifRef}
+          className="sertif-transition text-5xl w-auto text-red-500 z-10"
+        >
+          Certificate
+        </h2>
         <div className="w-3/12 h-[4px] bg-red-700"></div>
       </div>
       <div className="w-full h-auto items-center mb-10">

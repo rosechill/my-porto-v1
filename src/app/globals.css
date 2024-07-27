@@ -8,44 +8,43 @@
   }
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'fortune';
+  font-family: "fortune";
 }
 
-
 /* horizontal bar */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   height: 3px;
   width: 7px;
   background: gray;
 }
 
 ::-webkit-scrollbar-track {
-background: rgb(255, 255, 255); 
+  background: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar-thumb {
-background: #888; 
+  background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: #555; 
+  background: #555;
 }
 
-::-webkit-scrollbar-thumb:vertical{
+::-webkit-scrollbar-thumb:vertical {
   background: rgb(10, 10, 10);
   border-radius: 10px;
 }
 /* horizontal bar */
 
 @font-face {
-  font-family: 'fortune';
-  src: url('../font/GoboldBold.otf') format('opentype');
+  font-family: "fortune";
+  src: url("../font/GoboldBold.otf") format("opentype");
 }
 
-.m-0-auto{
+.m-0-auto {
   margin: 0 auto;
 }

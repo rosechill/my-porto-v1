@@ -4,10 +4,7 @@ import React from "react";
 import Image from "next/image";
 import CustomModal from "../CustomModal";
 import { RiExternalLinkFill } from "react-icons/ri";
-import {
-  useDisclosure,
-} from "@nextui-org/react";
-
+import { useDisclosure } from "@nextui-org/react";
 
 const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -109,10 +106,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div id="section2" className="h-auto w-full  bg-[#F5F5F5] justify-center  relative overflow-hidden">
+    <div
+      id="section2"
+      className="h-auto w-full  bg-[#F5F5F5] justify-center  relative overflow-hidden"
+    >
       <div className="  w-full pt-20 flex gap-4 justify-center items-center ">
         <div className="w-3/12 h-[4px] bg-red-700 "></div>
-        <h2 className=" line-transition text-5xl w-auto text-red-500 z-10">Highlighted Project</h2>
+        <h2 className=" line-transition text-5xl w-auto text-red-500 z-10">
+          Highlighted Project
+        </h2>
         <div className=" w-3/12 h-[4px] bg-red-700 "></div>
       </div>
 
@@ -131,13 +133,17 @@ const Index = () => {
           <div className="w-2/4 ">
             {backdrops.map((b) => (
               <div className="py-4" key={b}>
-                <a className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex justify-center gap-4" href="https://travelxism.com/" target="_blank">
-                  travelxism.com <RiExternalLinkFill/>
+                <a
+                  className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex justify-center gap-4"
+                  href="https://travelxism.com/"
+                  target="_blank"
+                >
+                  travelxism.com <RiExternalLinkFill />
                 </a>
                 <h2 className="text-xl py-4 text-justify">
-                  internship project, re-create the UI UX Responsive appearance of company website
-                  based on the braimstorming with team and suggestions from
-                  several respondents
+                  internship project, re-create the UI UX Responsive appearance
+                  of company website based on the braimstorming with team and
+                  suggestions from several respondents
                 </h2>
                 <Image
                   className=" h-full w-full cursor-pointer "
@@ -163,20 +169,26 @@ const Index = () => {
           <div className="w-2/4 ">
             {backdrops.map((b) => (
               <div key={b}>
-                <a className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex justify-center gap-4" href="https://funrobo.id/" target="_blank">
-                  funrobo.id <RiExternalLinkFill/>
+                <a
+                  className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex justify-center gap-4"
+                  href="https://funrobo.id/"
+                  target="_blank"
+                >
+                  funrobo.id <RiExternalLinkFill />
                 </a>
                 <h2 className="text-xl py-4 text-justify">
-                  freelance project, create the information system website for the company. have a few features like translate, article, responsive web etc.
+                  freelance project, create the information system website for
+                  the company. have a few features like translate, article,
+                  responsive web etc.
                 </h2>
-              <Image
-                className=" h-full w-full cursor-pointer "
-                key={b}
-                onClick={() => handleOpenSecondModal(b, size)}
-                src="/funrobo.jpeg"
-                width={400}
-                height={300}
-                alt="Picture of the author"
+                <Image
+                  className=" h-full w-full cursor-pointer "
+                  key={b}
+                  onClick={() => handleOpenSecondModal(b, size)}
+                  src="/funrobo.jpeg"
+                  width={400}
+                  height={300}
+                  alt="Picture of the author"
                 />
               </div>
             ))}
