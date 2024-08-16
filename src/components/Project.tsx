@@ -106,7 +106,7 @@ const Project = () => {
               <div className="flex lg:flex-row flex-col gap-4">
                 <div>
                   <Image
-                    className="lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
+                    className="lg:h-[300px] h-[200px] lg:w-[600px] w-full rounded-lg"
                     src="/geoservice.png"
                     width={600}
                     height={400}
@@ -143,7 +143,7 @@ const Project = () => {
               <div className="flex lg:flex-row flex-col gap-4">
                 <div>
                   <Image
-                    className="lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
+                    className="lg:h-[300px] h-[200px] lg:w-[600px] w-full rounded-lg"
                     src="/gpstracker.jpeg"
                     width={600}
                     height={400}
@@ -180,7 +180,7 @@ const Project = () => {
                 <div className="flex lg:flex-row flex-col gap-4">
                   <div>
                     <Image
-                      className="cursor-pointer lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
+                      className="cursor-pointer lg:h-[300px] h-[200px] lg:w-[600px] w-full rounded-lg"
                       key={b}
                       onClick={() => handleOpen(b)}
                       src="/travelxism.png"
@@ -218,7 +218,7 @@ const Project = () => {
                 <div className="flex lg:flex-row flex-col gap-4">
                   <div>
                     <Image
-                      className="cursor-pointer lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
+                      className="cursor-pointer lg:h-[300px] h-[200px] lg:w-[600px] w-full rounded-lg"
                       key={b}
                       onClick={() => handleOpenSecondModal(b)}
                       src="/funrobo.jpeg"
