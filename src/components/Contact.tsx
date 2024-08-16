@@ -77,7 +77,7 @@ export default function ContactHeaderSection() {
 
   return (
     <section className="lg:py-16 py-8 bg-[#F5F5F5] space-y-4 " id="section4">
-      <div className="w-full pt-5 lg:pb-10 pb-5 flex gap-4 justify-center items-center">
+      <div className="w-full pt-5 lg:pb-10 pb-5 flex gap-4 justify-center items-center text-center">
         <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
         <h2 className="sertif-transition lg:text-5xl text-xl text-red-500 z-10">Let's get in touch</h2>
         <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>

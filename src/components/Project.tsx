@@ -78,9 +78,9 @@ const Project = () => {
 
   return (
     <div id="section2" className="h-auto w-full  bg-[#F5F5F5] justify-center  relative overflow-hidden">
-      <div className="  w-full pt-20 flex gap-4 justify-center items-center ">
+      <div className="  w-full pt-20 flex gap-4 justify-center items-center text-center">
         <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700 "></div>
-        <h2 className=" line-transition lg:text-5xl text-xl w-auto text-red-500 z-10">Highlighted Project</h2>
+        <h2 className=" line-transition lg:text-5xl text-xl w-auto text-red-500 z-10 ">Highlighted Project</h2>
         <div className=" w-3/12 lg:h-[4px] h-[2px] bg-red-700 "></div>
       </div>
       {/* Project */}
