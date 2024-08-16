@@ -79,20 +79,20 @@ const Project = () => {
   return (
     <div id="section2" className="h-auto w-full  bg-[#F5F5F5] justify-center  relative overflow-hidden">
       <div className="  w-full pt-20 flex gap-4 justify-center items-center ">
-        <div className="w-3/12 h-[4px] bg-red-700 "></div>
-        <h2 className=" line-transition text-5xl w-auto text-red-500 z-10">Highlighted Project</h2>
-        <div className=" w-3/12 h-[4px] bg-red-700 "></div>
+        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700 "></div>
+        <h2 className=" line-transition lg:text-5xl text-xl w-auto text-red-500 z-10">Highlighted Project</h2>
+        <div className=" w-3/12 lg:h-[4px] h-[2px] bg-red-700 "></div>
       </div>
       {/* Project */}
-      <div className=" w-auto h-full m-[3rem] border-[2px] border-red-700 rounded-lg flex flex-col gap-4 relative ">
+      <div className=" w-auto h-full lg:m-[3rem] m-4 border-[2px] border-red-700 rounded-lg flex flex-col gap-4 relative ">
         <CustomModal backdrop={backdrop} size={size} isOpen={isOpen} onClose={onClose} data={modalData[0]} />
 
-        <div className="w-full h-full flex flex-col gap-6 justify-center items-center p-8 ">
+        <div className="w-full h-full flex flex-col lg:gap-6 gap-4 lg:p-8 p-4  justify-center items-center ">
           <div>
             {/* Geoservice Map */}
             <div className="py-4">
               <a
-                className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
+                className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
                 href="https://skripsi-web.vercel.app/"
                 target="_blank"
               >
@@ -103,10 +103,10 @@ const Project = () => {
                 googlemaps. then, I also contributed to creating dashboards to support data management and also data
                 calculations with complex filters such as in analytics.
               </h2>
-              <div className="flex gap-4">
+              <div className="flex lg:flex-row flex-col gap-4">
                 <div>
                   <Image
-                    className="h-[300px] min-w-[600px] rounded-lg"
+                    className="lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
                     src="/geoservice.png"
                     width={600}
                     height={400}
@@ -129,7 +129,7 @@ const Project = () => {
             {/* Track It */}
             <div className="py-4">
               <a
-                className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
+                className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
                 href="https://skripsi-web.vercel.app/"
                 target="_blank"
               >
@@ -140,10 +140,10 @@ const Project = () => {
                 complex features, such as searching for an object and there is a movement visualisation feature. in
                 addition, there is a dashboard for data management.
               </h2>
-              <div className="flex gap-4">
+              <div className="flex lg:flex-row flex-col gap-4">
                 <div>
                   <Image
-                    className="h-[300px] min-w-[600px] rounded-lg"
+                    className="lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
                     src="/gpstracker.jpeg"
                     width={600}
                     height={400}
@@ -167,7 +167,7 @@ const Project = () => {
             {backdrops.map(b => (
               <div className="py-4" key={b}>
                 <a
-                  className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
+                  className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
                   href="https://skripsi-web.vercel.app/"
                   target="_blank"
                 >
@@ -177,10 +177,10 @@ const Project = () => {
                   Internship project, re-create the UI UX Responsive appearance of company website based on the
                   braimstorming with team and suggestions from several respondents.
                 </h2>
-                <div className="flex gap-4">
+                <div className="flex lg:flex-row flex-col gap-4">
                   <div>
                     <Image
-                      className="cursor-pointer h-[300px] min-w-[600px] rounded-lg"
+                      className="cursor-pointer lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
                       key={b}
                       onClick={() => handleOpen(b)}
                       src="/travelxism.png"
@@ -205,7 +205,7 @@ const Project = () => {
             {backdrops.map(b => (
               <div key={b}>
                 <a
-                  className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
+                  className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
                   href="https://funrobo.id/"
                   target="_blank"
                 >
@@ -215,10 +215,10 @@ const Project = () => {
                   in the funrobo project, I contributed to creating designs for desktop and mobile. then, implemented
                   the design and API integration. made responsive so that it could be accessed by all devices.
                 </h2>
-                <div className="flex gap-4">
+                <div className="flex lg:flex-row flex-col gap-4">
                   <div>
                     <Image
-                      className="cursor-pointer h-[300px] min-w-[600px] rounded-lg"
+                      className="cursor-pointer lg:h-[300px] h-[200px] lg:min-w-[600px] w-full rounded-lg"
                       key={b}
                       onClick={() => handleOpenSecondModal(b)}
                       src="/funrobo.jpeg"

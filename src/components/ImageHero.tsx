@@ -44,8 +44,9 @@ const ImageHero = () => {
           alt="Picture 2"
         />
       </div>
+
       <div
-        className="image-container transition-image absolute bottom-0 z-10 hover:cursor-pointer flex justify-center items-end lg:hidden"
+        className="image-container transition-image z-10 hover:cursor-pointer flex justify-center items-end lg:hidden"
         onClick={handleClick}
       >
         <img

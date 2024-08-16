@@ -36,7 +36,30 @@ const NavigationBar = () => {
 
   return (
     <nav className="w-full flex justify-center relative z-[99999]">
-      <ul className=" font-extrabold  text-[#F5F5F5] flex justify-center gap-10 text-3xl z-50 fixed top-0 bg-red-700 m-0-auto py-2 lg:w-2/6 w-5/6 rounded-b-full shadow-custom">
+      <ul className=" font-extrabold  text-[#F5F5F5] flex justify-center gap-10 text-3xl z-50 fixed top-0 bg-red-700 m-0-auto py-2 lg:w-2/6 w-5/6 rounded-b-full shadow-custom max-lg:hidden">
+        <Tooltip showArrow content={'Home'} className="navbar-animated">
+          <li className="px-4 hover:cursor-pointer" onClick={() => scrollToSection('section1')}>
+            <FaHouseChimney />
+          </li>
+        </Tooltip>
+        <Tooltip showArrow content={'Project'} className="navbar-animated">
+          <li className="px-4 hover:cursor-pointer" onClick={() => scrollToSection('section2')}>
+            <RiComputerFill />
+          </li>
+        </Tooltip>
+        <Tooltip showArrow content={'Certificate'} className="navbar-animated">
+          <li className="px-4 hover:cursor-pointer" onClick={() => scrollToSection('section3')}>
+            <PiCertificateFill />
+          </li>
+        </Tooltip>
+        <Tooltip showArrow content={'Contact'} className="navbar-animated">
+          <li className="px-4 hover:cursor-pointer" onClick={() => scrollToSection('section4')}>
+            <FaBlenderPhone />
+          </li>
+        </Tooltip>
+      </ul>
+
+      <ul className=" font-extrabold  text-[#F5F5F5] flex justify-center gap-10 text-2xl z-50 fixed top-0 bg-red-700 m-0-auto p-2 rounded-b-lg shadow-custom lg:hidden">
         <Tooltip showArrow content={'Home'} className="navbar-animated">
           <li className="px-4 hover:cursor-pointer" onClick={() => scrollToSection('section1')}>
             <FaHouseChimney />

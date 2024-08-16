@@ -64,20 +64,40 @@ const Sertifikat = () => {
     cssEase: 'linear',
   }
 
+  const settings2 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: 'linear',
+  }
+
   return (
-    <div id="section3" className="h-full bg-[#F5F5F5] w-screen text-center overflow-hidden py-10 space-y-5">
-      <div className="w-full pt-5 pb-10 flex gap-4 justify-center items-center">
-        <div className="w-3/12 h-[4px] bg-red-700"></div>
-        <h2 ref={sertifRef} className="sertif-transition text-5xl w-auto text-red-500 z-10">
+    <div id="section3" className="h-full bg-[#F5F5F5] w-screen text-center overflow-hidden lg:py-10 py-5 space-y-5">
+      <div className="w-full pt-5 lg:pb-10 pb-5 flex gap-4 justify-center items-center">
+        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
+        <h2 ref={sertifRef} className="sertif-transition lg:text-5xl text-xl w-auto text-red-500 z-10">
           Certificate
         </h2>
-        <div className="w-3/12 h-[4px] bg-red-700"></div>
+        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
       </div>
-      <div className="w-full h-auto items-center mb-10">
+      <div className="w-full h-auto items-center mb-10 max-lg:hidden">
         <Slider {...settings}>
           {sertifImages.map(imageData => (
-            <div key={imageData.id} className='pb-10'>
+            <div key={imageData.id} className="pb-10">
               <img src={imageData.sertifImage} className="w-[90%] h-[350px] m-0-auto rounded-lg " loading="lazy" />
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <div className="w-full h-auto items-center mb-10 lg:hidden">
+        <Slider {...settings2}>
+          {sertifImages.map(imageData => (
+            <div key={imageData.id} className="pb-10">
+              <img src={imageData.sertifImage} className="w-[90%] h-[250px] m-0-auto rounded-lg " loading="lazy" />
             </div>
           ))}
         </Slider>

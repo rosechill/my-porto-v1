@@ -76,14 +76,14 @@ export default function ContactHeaderSection() {
     })
 
   return (
-    <section className="py-16 bg-[#F5F5F5] space-y-4 " id="section4">
-      <div className="w-full pt-5 pb-10 flex gap-4 justify-center items-center">
-        <div className="w-3/12 h-[4px] bg-red-700"></div>
-        <h2 className="sertif-transition text-5xl text-red-500 z-10">Let's get in touch</h2>
-        <div className="w-3/12 h-[4px] bg-red-700"></div>
+    <section className="lg:py-16 py-8 bg-[#F5F5F5] space-y-4 " id="section4">
+      <div className="w-full pt-5 lg:pb-10 pb-5 flex gap-4 justify-center items-center">
+        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
+        <h2 className="sertif-transition lg:text-5xl text-xl text-red-500 z-10">Let's get in touch</h2>
+        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
       </div>
       {/* Form */}
-      <form onSubmit={handleSubmit(onSubmitted)} className="flex flex-col gap-2 w-2/4 m-0-auto">
+      <form onSubmit={handleSubmit(onSubmitted)} className="flex flex-col gap-2 lg:w-2/4 w-full lg:px-0 px-4 m-0-auto">
         <div className="flex flex-col gap-2">
           <Input {...register('name')} label="Nama Lengkap" variant="bordered" className="border-[#2E3E78]" />
           <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.name?.message}</p>
