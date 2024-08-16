@@ -1,11 +1,6 @@
-import {
-  FaWhatsappSquare,
-  FaInstagramSquare,
-  FaLinkedin,
-  FaGithubSquare,
-} from "react-icons/fa";
+import { FaWhatsappSquare, FaInstagramSquare, FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 
-const index = () => {
+const SocialMedia = () => {
   return (
     <nav className="w-full  flex  ">
       <ul className=" w-full font-extrabold  text-red-600 flex  gap-5 text-4xl z-50">
@@ -31,7 +26,7 @@ const index = () => {
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default index;
+export default SocialMedia
