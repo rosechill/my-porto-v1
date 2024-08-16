@@ -1,9 +1,11 @@
+'use client'
 import Socmed from './ScoialMedia'
 import ImageHero from './ImageHero'
 import gsap from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef, useEffect } from 'react'
+import { InfiniteMovingCardsDemo } from './containerMovingIcon'
 
 const index = () => {
   const backgroundImage = useRef(null)
@@ -101,9 +103,11 @@ const index = () => {
         </div>
         <ImageHero />
       </div>
-
+      <div className="transition-image w-[480px] m-0-auto z-50 absolute bottom-0">
+        <InfiniteMovingCardsDemo />
+      </div>
       <div className=" w-full h-full flex flex-col items-center justify-center z-50 lg:hidden ">
-        <div className='flex flex-col'>
+        <div className="flex flex-col">
           <h2 className="lg:text-3xl text-lg text-red-700">Hay, i'm </h2>
           <h2 className="lg:text-6xl text-2xl font-extrabold text-red-700">Bagas Adytia</h2>
           <h2 className="lg:text-3xl text-lg text-red-700">Passionate</h2>

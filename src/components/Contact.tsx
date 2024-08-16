@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import React, { useState } from 'react'
 import * as yup from 'yup'
 import { Resolver, useForm } from 'react-hook-form'
@@ -77,7 +76,7 @@ export default function ContactHeaderSection() {
     })
 
   return (
-    <section className="py-16 bg-white space-y-4 " id="section4">
+    <section className="py-16 bg-[#F5F5F5] space-y-4 " id="section4">
       <div className="w-full pt-5 pb-10 flex gap-4 justify-center items-center">
         <div className="w-3/12 h-[4px] bg-red-700"></div>
         <h2 className="sertif-transition text-5xl text-red-500 z-10">Let's get in touch</h2>

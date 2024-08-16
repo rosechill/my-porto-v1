@@ -127,45 +127,41 @@ const Project = () => {
             </div>
 
             {/* Track It */}
-            {backdrops.map(b => (
-              <div className="py-4" key={b}>
-                <a
-                  className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
-                  href="https://skripsi-web.vercel.app/"
-                  target="_blank"
-                >
-                  * Track It
-                </a>
-                <h2 className="py-4 text-justify">
-                  in the Track It project, I contributed to integrating a map to track a vehicle. the map itself has
-                  many complex features, such as searching for an object and there is a movement visualisation feature.
-                  in addition, there is a dashboard for data management.
-                </h2>
-                <div className="flex gap-4">
-                  <div>
-                    <Image
-                      className="h-[300px] min-w-[600px] rounded-lg"
-                      key={b}
-                      onClick={() => handleOpen(b)}
-                      src="/gpstracker.jpeg"
-                      width={600}
-                      height={400}
-                      alt="Picture of the author"
-                    />
-                    <p className="font-bold text-xs text-center pt-2">No detail available</p>
-                  </div>
-                  <ul className="list-disc ps-4">
-                    <li>Created a car movement visualization feature based on a list of coordinate.</li>
-                    <li>
-                      Integrated OpenStreetMap, creating a reusable map component that supports various map-related
-                      features.
-                    </li>
-                    <li>Implemented user interface design and integrated APIs for the features.</li>
-                    <li>Developed a Content Management System (CMS).</li>
-                  </ul>
+            <div className="py-4">
+              <a
+                className="text-3xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
+                href="https://skripsi-web.vercel.app/"
+                target="_blank"
+              >
+                * Track It
+              </a>
+              <h2 className="py-4 text-justify">
+                in the Track It project, I contributed to integrating a map to track a vehicle. the map itself has many
+                complex features, such as searching for an object and there is a movement visualisation feature. in
+                addition, there is a dashboard for data management.
+              </h2>
+              <div className="flex gap-4">
+                <div>
+                  <Image
+                    className="h-[300px] min-w-[600px] rounded-lg"
+                    src="/gpstracker.jpeg"
+                    width={600}
+                    height={400}
+                    alt="Picture of the author"
+                  />
+                  <p className="font-bold text-xs text-center pt-2">No detail available</p>
                 </div>
+                <ul className="list-disc ps-4">
+                  <li>Created a car movement visualization feature based on a list of coordinate.</li>
+                  <li>
+                    Integrated OpenStreetMap, creating a reusable map component that supports various map-related
+                    features.
+                  </li>
+                  <li>Implemented user interface design and integrated APIs for the features.</li>
+                  <li>Developed a Content Management System (CMS).</li>
+                </ul>
               </div>
-            ))}
+            </div>
 
             {/* Travelxism */}
             {backdrops.map(b => (
@@ -216,8 +212,8 @@ const Project = () => {
                   * funrobo.id <RiExternalLinkFill />
                 </a>
                 <h2 className="py-4 text-justify">
-                  freelance project, create the information system website for the company. have a few features like
-                  translate, article, responsive web etc.
+                  in the funrobo project, I contributed to creating designs for desktop and mobile. then, implemented
+                  the design and API integration. made responsive so that it could be accessed by all devices.
                 </h2>
                 <div className="flex gap-4">
                   <div>
@@ -233,9 +229,8 @@ const Project = () => {
                     <p className="font-bold text-xs text-center pt-2">Click the image for detail</p>
                   </div>
                   <ul className="list-disc ps-4">
-                    <li>Focused on revamping the website user interface and e-tourism implementation.</li>
-                    <li>Implemented Front-End, Responsive Web design, and integrated the APIs for the feature.</li>
-                    <li>Improved website loading time performance.</li>
+                    <li>Designed user interface and user experience for website and mobile using figma.</li>
+                    <li>Implemented Front-End, Responsive Web design, and integrated the APIs for the feature</li>
                     <li>Developed a Content Management System (CMS).</li>
                     <li>Resolved bugs during the development phase and production.</li>
                   </ul>

@@ -5,7 +5,6 @@ import { useEffect } from 'react'
 import NavigationBar from '../components/NavigationBar'
 import Project from '../components/Project'
 import Sertifikat from '../components/Sertifikat'
-import TestAja from '../components/test'
 import ContactHeaderSection from '../components/Contact'
 import Footer from '../components/Footer'
 
@@ -21,6 +20,7 @@ export default function Home() {
     <div className="h-full w-full overflow-x-hidden relative">
       <NavigationBar />
       <Landing />
+      {/* <InfiniteMovingCardsDemo /> */}
       <Project />
       <Sertifikat />
       <ContactHeaderSection />
