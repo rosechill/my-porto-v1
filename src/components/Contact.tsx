@@ -18,7 +18,10 @@ const schema = yup.object({
 
 export default function ContactHeaderSection() {
   const [loading, setLoading] = useState(false)
-  const notify = () => toast.success('Berhasil mengirimkan formulir')
+  const notify = () =>
+    toast.success('Berhasil mengirimkan formulir', {
+      position: 'bottom-right',
+    })
 
   const form = useForm<FormContact>({
     defaultValues: {
