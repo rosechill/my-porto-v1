@@ -82,6 +82,20 @@ const index = () => {
     )
   }, [])
 
+  useEffect(() => {
+    gsap.fromTo(
+      '.section1',
+      {
+        scale: 1.5,
+      },
+      {
+        scale: 1,
+        duration: 1.5,
+        ease: 'power4.inOut',
+      }
+    )
+  }, [])
+
   return (
     <div
       id="section1"
@@ -89,8 +103,8 @@ const index = () => {
       className="relative h-screen w-full flex justify-center items-center bg-[#F5F5F5] overflow-hidden"
     >
       {/* desktop */}
-      <div ref={landingImage} className=" w-full h-full flex justify-center z-50 max-lg:hidden ">
-        <div className="w-full relative  m-[5rem] border-4  border-red-700 shadow-2xl flex justify-center bg-[#F5F5F5] rounded-xl ">
+      <div ref={landingImage} className="w-full h-full flex justify-center z-50 max-lg:hidden ">
+        <div className="w-full relative  m-[5rem] border-4  border-red-700 shadow-2xl flex justify-center bg-[#ffe7e7] rounded-3xl ">
           <div className=" w-full h-full flex flex-col gap-5 z-10 justify-center ms-5 text-container">
             <h2 className="lg:text-3xl text-lg text-red-700">Hay, i'm</h2>
             <h2 className="lg:text-6xl text-2xl font-extrabold text-red-700">Bagas Adytia</h2>
