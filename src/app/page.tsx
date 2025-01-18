@@ -20,7 +20,6 @@ export default function Home() {
     <div className="h-full w-full overflow-x-hidden relative">
       <NavigationBar />
       <Landing />
-      {/* <InfiniteMovingCardsDemo /> */}
       <Project />
       <Sertifikat />
       <ContactHeaderSection />

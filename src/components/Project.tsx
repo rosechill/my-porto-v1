@@ -89,6 +89,26 @@ const Project = () => {
 
         <div className="w-full h-full flex flex-col lg:gap-6 gap-4 lg:p-8 p-4  justify-center items-center ">
           <div>
+            {/* acc bid */}
+            <div className="py-4">
+              <p className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4">
+                {'* ACC BID Migration'}
+              </p>
+              <h2 className="py-4 text-justify">
+                <p>Detail coming soon</p>
+              </h2>
+              <div className="flex lg:flex-row flex-col gap-4"></div>
+            </div>
+            {/* edms */}
+            <div className="py-4">
+              <p className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4">
+                * Enterprise Document Management System
+              </p>
+              <h2 className="py-4 text-justify">
+                <p>Detail coming soon</p>
+              </h2>
+              <div className="flex lg:flex-row flex-col gap-4"></div>
+            </div>
             {/* Geoservice Map */}
             <div className="py-4">
               <a
