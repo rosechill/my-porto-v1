@@ -111,13 +111,9 @@ const Project = () => {
             </div>
             {/* Geoservice Map */}
             <div className="py-4">
-              <a
-                className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4"
-                href="https://skripsi-web.vercel.app/"
-                target="_blank"
-              >
+              <p className="lg:text-3xl text-xl text-red-500  transition duration-300 ease-in-out hover:text-red-800 flex gap-4">
                 * Geoservice Map
-              </a>
+              </p>
               <h2 className="py-4 text-justify">
                 in the Geoservice project, I contributed to integrating dynamic maps that can be used in iframes such as
                 googlemaps. then, I also contributed to creating dashboards to support data management and also data
