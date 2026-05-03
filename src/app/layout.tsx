@@ -3,7 +3,7 @@ import './globals.css'
 import { poppins } from '../components/font'
 
 export const metadata = {
-  title: 'ditdev',
+  title: 'rosedev',
   description: 'Website Portofolio',
 }
 
