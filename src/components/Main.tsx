@@ -22,6 +22,17 @@ export default function Main() {
   }, [])
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }, [])
+
+  useEffect(() => {
     ;(async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
       const locomotiveScroll = new LocomotiveScroll()
