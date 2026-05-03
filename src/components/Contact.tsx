@@ -92,50 +92,57 @@ export default function ContactHeaderSection() {
 
   const FormInput = () => {
     return (
-      <form
-        onSubmit={handleSubmit(onSubmitted)}
-        className="flex flex-col gap-2 lg:w-[40%] w-full lg:px-0 px-4 m-0-auto"
-      >
-        <div className="flex flex-col gap-2">
-          <Input {...register('name')} label="Full Name" variant="bordered" className="border-[#2E3E78]" />
-          <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.name?.message}</p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-8">
+      <div className=" lg:w-3/4 w-full flex justify-center">
+        <form
+          onSubmit={handleSubmit(onSubmitted)}
+          className="flex flex-col gap-2 lg:w-full sm:w-3/4 w-full sm:px-0 px-4"
+        >
           <div className="flex flex-col gap-2">
-            <Input {...register('phoneNumber')} label="Phone Number" variant="bordered" className="border-[#2E3E78]" />
-            <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.phoneNumber?.message}</p>
+            <Input {...register('name')} label="Full Name" variant="bordered" className="border-[#2E3E78]" />
+            <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.name?.message}</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-8">
+            <div className="flex flex-col gap-2">
+              <Input
+                {...register('phoneNumber')}
+                label="Phone Number"
+                variant="bordered"
+                className="border-[#2E3E78]"
+              />
+              <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.phoneNumber?.message}</p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Input {...register('email')} label="Email" variant="bordered" className="border-[#2E3E78]" />
+              <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.email?.message}</p>
+            </div>
           </div>
           <div className="flex flex-col gap-2">
-            <Input {...register('email')} label="Email" variant="bordered" className="border-[#2E3E78]" />
-            <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.email?.message}</p>
+            <Input {...register('subject')} label="Subject" variant="bordered" className="border-[#2E3E78]" />
+            <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.subject?.message}</p>
           </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <Input {...register('subject')} label="Subject" variant="bordered" className="border-[#2E3E78]" />
-          <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.subject?.message}</p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <Textarea
-            {...register('message')}
-            label="Input your message"
-            variant="bordered"
-            className="border-[#2E3E78]"
-          />
-          <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.message?.message}</p>
-        </div>
+          <div className="flex flex-col gap-2">
+            <Textarea
+              {...register('message')}
+              label="Input your message"
+              variant="bordered"
+              className="border-[#2E3E78]"
+            />
+            <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.message?.message}</p>
+          </div>
 
-        <Button className={`${buttonColor} w-2/4 m-0-auto `} type="submit" disabled={!isValid} isLoading={loading}>
-          Submit
-        </Button>
-      </form>
+          <Button className={`${buttonColor} w-2/4 m-0-auto `} type="submit" disabled={!isValid} isLoading={loading}>
+            Submit
+          </Button>
+        </form>
+      </div>
     )
   }
 
   return (
     <section className="lg:py-16 py-8 space-y-4 " id="section4">
       <SectionTitle title="Let's get in touch" />
-      <div className="flex lg:flex-row flex-col gap-4 justify-center items-center">
+      <div className="grid lg:grid-cols-2 grid-cols-1">
         <div className="!cursor-default pointer-events-none">
           <Lottie options={defaultOptions} height={400} width={500} />
         </div>
