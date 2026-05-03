@@ -135,8 +135,10 @@ export default function ContactHeaderSection() {
   return (
     <section className="lg:py-16 py-8 space-y-4 " id="section4">
       <SectionTitle title="Let's get in touch" />
-      <div className="flex lg:flex-row flex-col gap-4 justify-center items-center !cursor-default pointer-events-none">
-        <Lottie options={defaultOptions} height={400} width={500} />
+      <div className="flex lg:flex-row flex-col gap-4 justify-center items-center">
+        <div className="!cursor-default pointer-events-none">
+          <Lottie options={defaultOptions} height={400} width={500} />
+        </div>
         {FormInput()}
       </div>
       <Toaster />
