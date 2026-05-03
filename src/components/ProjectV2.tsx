@@ -21,6 +21,7 @@ export default function PortfolioSection() {
                 src={project.image}
                 alt={project.title}
                 className="w-full h-[220px] md:h-[300px] lg:h-[320px] object-cover"
+                loading="lazy"
               />
             </div>
           </div>
