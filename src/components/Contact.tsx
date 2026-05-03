@@ -5,8 +5,11 @@ import * as yup from 'yup'
 import { Resolver, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Button, Input, Textarea } from '@nextui-org/react'
-import { FormContact } from '../app/definition'
+import { FormContact } from '../types/definition'
 import toast, { Toaster } from 'react-hot-toast'
+import SectionTitle from './SectionTitle'
+import animationData from '../../public/lotties/contact.json'
+import Lottie from 'react-lottie'
 
 const schema = yup.object({
   name: yup.string().required('Nama harus diisi').min(3, 'Masukkan Nama yang valid'),
@@ -42,7 +45,7 @@ export default function ContactHeaderSection() {
     formState: { errors, isValid },
   } = form
 
-  const buttonColor = isValid ? 'bg-red-700 text-white cursor-pointer' : 'bg-gray-200 text-black cursor-not-allowed'
+  const buttonColor = isValid ? 'bg-mynavy text-white cursor-pointer' : 'bg-gray-200 text-black cursor-not-allowed'
 
   const onSubmitted = async (data: FormContact) => {
     const body = {
@@ -78,15 +81,18 @@ export default function ContactHeaderSection() {
       return responseData
     })
 
-  return (
-    <section className="lg:py-16 py-8 bg-[#F5F5F5] space-y-4 " id="section4">
-      <div className="w-full pt-5 lg:pb-10 pb-5 flex gap-4 justify-center items-center text-center">
-        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
-        <h2 className="sertif-transition lg:text-5xl text-xl text-red-500 z-10">Let's get in touch</h2>
-        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700"></div>
-      </div>
-      {/* Form */}
-      <form onSubmit={handleSubmit(onSubmitted)} className="flex flex-col gap-2 lg:w-2/4 w-full lg:px-0 px-4 m-0-auto">
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
+
+  const FormInput = () => {
+    return (
+      <form onSubmit={handleSubmit(onSubmitted)} className="flex flex-col gap-2 lg:w-[40%] w-full lg:px-0 px-4 m-0-auto">
         <div className="flex flex-col gap-2">
           <Input {...register('name')} label="Full Name" variant="bordered" className="border-[#2E3E78]" />
           <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.name?.message}</p>
@@ -94,12 +100,7 @@ export default function ContactHeaderSection() {
 
         <div className="grid grid-cols-2 gap-8">
           <div className="flex flex-col gap-2">
-            <Input
-              {...register('phoneNumber')}
-              label="Phone Number"
-              variant="bordered"
-              className="border-[#2E3E78]"
-            />
+            <Input {...register('phoneNumber')} label="Phone Number" variant="bordered" className="border-[#2E3E78]" />
             <p className="ms-3 text-xs text-red-500 min-h-[20px]">{errors.phoneNumber?.message}</p>
           </div>
           <div className="flex flex-col gap-2">
@@ -125,7 +126,16 @@ export default function ContactHeaderSection() {
           Submit
         </Button>
       </form>
+    )
+  }
 
+  return (
+    <section className="lg:py-16 py-8 space-y-4 " id="section4">
+      <SectionTitle title="Let's get in touch" />
+      <div className="flex lg:flex-row flex-col gap-4 justify-center items-center">
+        <Lottie options={defaultOptions} height={400} width={500} />
+        {FormInput()}
+      </div>
       <Toaster />
     </section>
   )

@@ -34,7 +34,7 @@
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  background: rgb(10, 10, 10);
+  background: #151B54;
   border-radius: 10px;
 }
 
@@ -76,4 +76,9 @@
 
 .animate-fade-out-to-top {
   animation: fade-out-to-top 0.5s forwards;
+}
+
+.slick-slide:focus,
+.slick-slide div:focus {
+  outline: none !important;
 }

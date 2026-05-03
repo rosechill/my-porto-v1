@@ -1,4 +1,4 @@
-import { FormContact } from '../../definition'
+import { FormContact } from '../../../types/definition'
 import { mailOptions, transporter } from '../../../services/lib/nodemailer'
 
 const CONTACT_MESSAGE_FIELDS = {

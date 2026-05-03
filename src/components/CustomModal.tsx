@@ -20,7 +20,7 @@ const CustomModal = ({ backdrop, size, isOpen, onClose, data }) => {
       size={size}
       isOpen={isOpen}
       onClose={onClose}
-      className="border-4 border-red-700 bg-[#f5f5f5]"
+      className="border-4 border-mynavy bg-[#f5f5f5]"
     >
       <ModalContent>
         <ModalHeader className="flex flex-col gap-1 justify-center items-center">{data.title}</ModalHeader>

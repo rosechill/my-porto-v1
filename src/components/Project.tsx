@@ -79,12 +79,12 @@ const Project = () => {
   return (
     <div id="section2" className="h-auto w-full  bg-[#F5F5F5] justify-center  relative overflow-hidden">
       <div className="  w-full pt-20 flex gap-4 justify-center items-center text-center">
-        <div className="w-3/12 lg:h-[4px] h-[2px] bg-red-700 "></div>
+        <div className="w-3/12 lg:h-[4px] h-[2px] bg-mynavy "></div>
         <h2 className=" line-transition lg:text-5xl text-xl w-auto text-red-500 z-10 ">Highlighted Project</h2>
-        <div className=" w-3/12 lg:h-[4px] h-[2px] bg-red-700 "></div>
+        <div className=" w-3/12 lg:h-[4px] h-[2px] bg-mynavy "></div>
       </div>
       {/* Project */}
-      <div className=" w-auto h-full lg:m-[3rem] m-4 border-[2px] border-red-700 rounded-lg flex flex-col gap-4 relative ">
+      <div className=" w-auto h-full lg:m-[3rem] m-4 border-[2px] border-mynavy rounded-lg flex flex-col gap-4 relative ">
         <CustomModal backdrop={backdrop} size={size} isOpen={isOpen} onClose={onClose} data={modalData[0]} />
 
         <div className="w-full h-full flex flex-col lg:gap-6 gap-4 lg:p-8 p-4  justify-center items-center ">

@@ -6,7 +6,7 @@ import { InfiniteMovingCards } from './infiniteMovingCards'
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="rounded-md flex flex-col desktop:w-2/4 w-full ">
+    <div className="rounded-md flex flex-col desktop:w-2/4 w-full max-lg:hidden ">
       <InfiniteMovingCards items={stackImage} direction="right" speed="slow" />
     </div>
   )

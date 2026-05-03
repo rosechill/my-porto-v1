@@ -1,10 +1,9 @@
-import { Poppins } from 'next/font/google'
 import { Providers } from './providers'
 import './globals.css'
 import { poppins } from '../components/font'
 
 export const metadata = {
-  title: 'rosedev',
+  title: 'ditdev',
   description: 'Website Portofolio',
 }
 

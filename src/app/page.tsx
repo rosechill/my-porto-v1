@@ -1,14 +1,26 @@
 'use client'
 import Landing from '../components/LandingPage'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import NavigationBar from '../components/NavigationBar'
-import Project from '../components/Project'
-import Sertifikat from '../components/Sertifikat'
 import ContactHeaderSection from '../components/Contact'
 import Footer from '../components/Footer'
+import ProjectV2 from '../components/ProjectV2'
+import Certificate from '../components/Certificate'
+import BackToTop from '../components/BackToTop'
 
 export default function Home() {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShow(window.scrollY > 200)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   useEffect(() => {
     ;(async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
@@ -20,10 +32,11 @@ export default function Home() {
     <div className="h-full w-full overflow-x-hidden relative">
       <NavigationBar />
       <Landing />
-      <Project />
-      <Sertifikat />
+      <ProjectV2 />
+      <Certificate />
       <ContactHeaderSection />
       <Footer />
+      {show && <BackToTop />}
     </div>
   )
 }

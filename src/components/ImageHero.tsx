@@ -1,72 +1,41 @@
-import { useState, useRef } from 'react'
+'use client'
+
+import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
+import animationData from '../../public/lotties/hero.json'
+import Lottie from 'react-lottie'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const ImageHero = () => {
-  const [showFirstImage, setShowFirstImage] = useState(true)
-  const image1Ref = useRef(null)
-  const image2Ref = useRef(null)
+  const imageRef = useRef<HTMLImageElement | null>(null)
+  const isMobile = useIsMobile()
 
-  const handleClick = () => {
-    setShowFirstImage(!showFirstImage)
+  useEffect(() => {
+    if (imageRef.current) {
+      gsap.fromTo(imageRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' })
+    }
+  }, [])
 
-    const fadeInImage = showFirstImage ? image2Ref.current : image1Ref.current
-    const fadeOutImage = showFirstImage ? image1Ref.current : image2Ref.current
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
 
-    gsap.fromTo(
-      fadeInImage,
-      { opacity: 1, x: showFirstImage ? '-3%' : '3%' },
-      { opacity: 1, x: '0%', duration: 0.5, ease: 'power2.inOut' }
-    )
-
-    gsap.to(fadeOutImage, { opacity: 1, duration: 0.5 })
+  const getSize = () => {
+    if (isMobile) return 400
+    return 500
   }
 
   return (
-    <>
-      <div
-        className="image-container transition-image absolute bottom-0 z-10 hover:cursor-pointer flex justify-center items-end max-lg:hidden"
-        onClick={handleClick}
-      >
-        <img
-          ref={image1Ref}
-          className={`  transition-opacity ${showFirstImage ? '' : 'hidden'}`}
-          src="/dit-red.png"
-          width={500}
-          height={500}
-          alt="Picture 1"
-        />
-        <img
-          ref={image2Ref}
-          className={` transition-opacity  ${showFirstImage ? 'hidden' : ''}`}
-          src="/dit-white.png"
-          width={500}
-          height={500}
-          alt="Picture 2"
-        />
+    <div className="absolute lg:-bottom-5 bottom-0 z-10 flex justify-center items-end">
+      <div ref={imageRef}>
+        <Lottie options={defaultOptions} height={getSize()} width={getSize()} />
       </div>
-
-      <div
-        className="image-container transition-image z-10 hover:cursor-pointer flex justify-center items-end lg:hidden"
-        onClick={handleClick}
-      >
-        <img
-          ref={image1Ref}
-          className={`  transition-opacity ${showFirstImage ? '' : 'hidden'}`}
-          src="/dit-red.png"
-          width={300}
-          height={300}
-          alt="Picture 1"
-        />
-        <img
-          ref={image2Ref}
-          className={` transition-opacity  ${showFirstImage ? 'hidden' : ''}`}
-          src="/dit-white.png"
-          width={300}
-          height={300}
-          alt="Picture 2"
-        />
-      </div>
-    </>
+    </div>
   )
 }
 
