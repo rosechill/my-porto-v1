@@ -92,7 +92,10 @@ export default function ContactHeaderSection() {
 
   const FormInput = () => {
     return (
-      <form onSubmit={handleSubmit(onSubmitted)} className="flex flex-col gap-2 lg:w-[40%] w-full lg:px-0 px-4 m-0-auto">
+      <form
+        onSubmit={handleSubmit(onSubmitted)}
+        className="flex flex-col gap-2 lg:w-[40%] w-full lg:px-0 px-4 m-0-auto"
+      >
         <div className="flex flex-col gap-2">
           <Input {...register('name')} label="Full Name" variant="bordered" className="border-[#2E3E78]" />
           <p className="ms-3 text-xs text-red-500 min-h-[20px] ">{errors.name?.message}</p>
@@ -132,7 +135,7 @@ export default function ContactHeaderSection() {
   return (
     <section className="lg:py-16 py-8 space-y-4 " id="section4">
       <SectionTitle title="Let's get in touch" />
-      <div className="flex lg:flex-row flex-col gap-4 justify-center items-center">
+      <div className="flex lg:flex-row flex-col gap-4 justify-center items-center !cursor-default pointer-events-none">
         <Lottie options={defaultOptions} height={400} width={500} />
         {FormInput()}
       </div>

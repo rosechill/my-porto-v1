@@ -4,9 +4,11 @@ import 'slick-carousel/slick/slick-theme.css'
 import { useEffect, useRef, useState } from 'react'
 import SectionTitle from './SectionTitle'
 import { sertifImages } from '../utils/constant'
+import BlurredModal from './BlurredModal'
 
 const Certificate = () => {
   const [isMobile, setIsMobile] = useState(false)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   useEffect(() => {
     const checkScreen = () => {
@@ -36,7 +38,7 @@ const Certificate = () => {
       <div className="w-[80%] h-auto items-center mb-10 outline-none">
         <Slider {...settings}>
           {sertifImages.map(imageData => (
-            <div key={imageData.sertifImage} className="pb-10 px-2">
+            <div key={imageData.sertifImage} className="px-6">
               <img
                 src={imageData.sertifImage}
                 className="
@@ -46,13 +48,16 @@ const Certificate = () => {
                   h-[250px] lg:h-[350px]
                   object-contain 
                   rounded-lg
+                  cursor-pointer
                 "
                 loading="lazy"
+                onClick={() => setSelectedImage(imageData.sertifImage)}
               />
             </div>
           ))}
         </Slider>
       </div>
+      <BlurredModal selectedImage={selectedImage} setImage={setSelectedImage} />
     </div>
   )
 }

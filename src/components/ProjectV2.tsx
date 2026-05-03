@@ -1,7 +1,11 @@
 import { projects } from '../utils/constant'
 import SectionTitle from './SectionTitle'
+import { useState } from 'react'
+import BlurredModal from './BlurredModal'
 
 export default function PortfolioSection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
   return (
     <section className="w-full px-4 md:px-10 lg:px-20 py-16" id="section2">
       <SectionTitle title="Featured Projects" />
@@ -20,12 +24,14 @@ export default function PortfolioSection() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[220px] md:h-[300px] lg:h-[320px] object-cover"
+                className="w-full h-[220px] md:h-[300px] lg:h-[320px] object-cover cursor-pointer"
                 loading="lazy"
+                onClick={() => setSelectedImage(project.image)}
               />
             </div>
           </div>
         ))}
+        <BlurredModal selectedImage={selectedImage} setImage={setSelectedImage} />
       </div>
     </section>
   )
