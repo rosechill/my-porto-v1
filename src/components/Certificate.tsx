@@ -32,7 +32,7 @@ const Certificate = () => {
 
   return (
     <div className="flex flex-col justify-center items-center" id="section3">
-      <SectionTitle title="Certificate" />
+      <SectionTitle title="Certificates" />
       <div className="w-[80%] h-auto items-center mb-10 outline-none">
         <Slider {...settings}>
           {sertifImages.map(imageData => (
