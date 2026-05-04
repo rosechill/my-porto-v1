@@ -10,6 +10,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import SectionTitle from './SectionTitle'
 import animationData from '../../public/lotties/contact.json'
 import Lottie from 'react-lottie'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const schema = yup.object({
   name: yup.string().required('Nama harus diisi').min(3, 'Masukkan Nama yang valid'),
@@ -21,6 +22,8 @@ const schema = yup.object({
 
 export default function ContactHeaderSection() {
   const [loading, setLoading] = useState(false)
+  const isMobile = useIsMobile()
+
   const notify = () =>
     toast.success('Berhasil mengirimkan formulir', {
       position: 'bottom-right',
@@ -144,7 +147,7 @@ export default function ContactHeaderSection() {
       <SectionTitle title="Let's get in touch" />
       <div className="grid lg:grid-cols-2 grid-cols-1">
         <div className="!cursor-default pointer-events-none">
-          <Lottie options={defaultOptions} height={400} width={500} />
+          <Lottie options={defaultOptions} height={isMobile ? 350 : 500} width={isMobile ? 350 : 500} />
         </div>
         {FormInput()}
       </div>
