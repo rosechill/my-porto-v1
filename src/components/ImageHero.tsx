@@ -26,12 +26,12 @@ const ImageHero = () => {
   }
 
   const getSize = () => {
-    if (isMobile) return 400
+    if (isMobile) return 300
     return 500
   }
 
   return (
-    <div className="absolute lg:-bottom-5 bottom-0 z-10 flex justify-center items-end">
+    <div className="absolute sm:-bottom-5 bottom-2 z-10 flex justify-center items-end">
       <div ref={imageRef} className="!cursor-default pointer-events-none">
         <Lottie options={defaultOptions} height={getSize()} width={getSize()} />
       </div>

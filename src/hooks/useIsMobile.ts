@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
-export function useIsMobile(breakpoint: number = 768) {
+export function useIsMobile() {
+  const breakpoint = 640;
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -8,7 +9,7 @@ export function useIsMobile(breakpoint: number = 768) {
       setIsMobile(window.innerWidth < breakpoint)
     }
 
-    checkScreen() // run on mount
+    checkScreen()
 
     window.addEventListener('resize', checkScreen)
     return () => window.removeEventListener('resize', checkScreen)

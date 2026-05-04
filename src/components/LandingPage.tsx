@@ -109,14 +109,14 @@ const index = () => {
             {ready && (
               <React.Fragment>
                 <div className=" w-full h-full flex flex-col gap-5 z-10 justify-center ms-5 text-container">
-                  <h2 className="lg:text-3xl text-lg text-mynavy">Hay, i'm</h2>
-                  <h2 className="lg:text-6xl text-2xl font-extrabold text-mynavy">Bagas Adytia</h2>
+                  <h2 className="xl:text-3xl text-xl text-mynavy">Hay, i'm</h2>
+                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Bagas Adytia</h2>
                   <Socmed />
                 </div>
                 <div className=" w-full h-full flex flex-col gap-5 z-10 items-end justify-center me-5 text-container2">
-                  <h2 className="lg:text-3xl text-lg text-mynavy">Passionate</h2>
-                  <h2 className="lg:text-6xl text-2xl font-extrabold text-mynavy">Front-End</h2>
-                  <h2 className="lg:text-6xl text-2xl font-extrabold text-mynavy">Developer</h2>
+                  <h2 className="xl:text-3xl text-xl  text-mynavy">Passionate</h2>
+                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Front-End</h2>
+                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Developer</h2>
                   <DownloadResume />
                 </div>
               </React.Fragment>
@@ -126,18 +126,18 @@ const index = () => {
         </div>
 
         {/* mobile */}
-        <div className=" w-full h-full flex flex-col z-50 lg:hidden ">
+        <div className=" w-full h-full flex flex-col z-50 lg:hidden">
           <div className="flex flex-col pt-24 text-center gap-4">
-            <h2 className="lg:text-3xl text-lg text-mynavy">Hay, i'm </h2>
-            <h2 className="lg:text-6xl text-2xl font-extrabold text-mynavy">Bagas Adytia</h2>
+            <h2 className="text-lg text-mynavy">Hay, i'm </h2>
+            <h2 className="text-2xl font-extrabold text-mynavy">Bagas Adytia</h2>
           </div>
           <div className="flex flex-col justify-center items-center">
             <ImageHero />
             <Socmed />
           </div>
-          <div className="flex flex-col text-center items-center gap-4">
-            <h2 className="lg:text-3xl text-lg text-mynavy">Passionate</h2>
-            <h2 className="lg:text-6xl text-2xl font-extrabold text-mynavy">Front-End Developer</h2>
+          <div className="flex flex-col text-center items-center gap-4 pt-4">
+            <h2 className="text-lg text-mynavy">Passionate</h2>
+            <h2 className="text-2xl font-extrabold text-mynavy">Front-End Developer</h2>
             <DownloadResume />
           </div>
         </div>
@@ -148,15 +148,15 @@ const index = () => {
   const stylingContent = () => {
     return (
       <React.Fragment>
-        <div className="w-full h-[3rem] absolute bg-mynavy bottom-[50%] max-lg:hidden "></div>
-        <div className="w-full h-[3rem] absolute bg-mynavy top-0  max-lg:hidden "></div>
-        <div className="w-full h-[3rem] absolute bg-mynavy bottom-0  "></div>
+        <div className="w-full h-[3rem] absolute bg-mynavy bottom-[50%] max-lg:hidden"></div>
+        <div className="w-full h-[3rem] absolute bg-mynavy top-0 md:rounded-none rounded-b-full"></div>
+        <div className="w-full h-[3rem] absolute bg-mynavy bottom-0 md:rounded-none rounded-t-full"></div>
 
-        <div className="absolute w-[45%] h-[7rem] bg-[#F5F5F5] max-lg:hidden bottom-0 left-0 -skew-y-[100deg]"></div>
-        <div className="absolute w-[30%] h-[7rem] bg-[#F5F5F5] max-lg:hidden bottom-0 left-0 -skew-y-[100deg]"></div>
+        <div className="absolute w-[45%] h-[7rem] bg-[#F5F5F5] max-md:hidden bottom-0 left-0 -skew-y-[100deg]"></div>
+        <div className="absolute w-[30%] h-[7rem] bg-[#F5F5F5] max-md:hidden bottom-0 left-0 -skew-y-[100deg]"></div>
 
-        <div className="absolute w-[45%] h-[7rem] bg-[#F5F5F5] max-lg:hidden bottom-0 right-0 skew-y-[100deg]"></div>
-        <div className="absolute w-[30%] h-[7rem] bg-[#F5F5F5] max-lg:hidden bottom-0 right-0 skew-y-[100deg]"></div>
+        <div className="absolute w-[45%] h-[7rem] bg-[#F5F5F5] max-md:hidden bottom-0 right-0 skew-y-[100deg]"></div>
+        <div className="absolute w-[30%] h-[7rem] bg-[#F5F5F5] max-md:hidden bottom-0 right-0 skew-y-[100deg]"></div>
       </React.Fragment>
     )
   }
