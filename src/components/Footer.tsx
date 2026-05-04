@@ -24,19 +24,12 @@ const Footer = () => {
           <p className="text-sm opacity-70">Frontend Developer</p>
         </div>
         <div className="flex gap-4 text-sm opacity-80 flex-col">
-          <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+          <div className="grid sm:grid-cols-4 grid-cols-2 sm:gap-x-4 sm:gap-y-4 gap-x-8 gap-y-4 justify-center items-center">
             {navItems.map((item, index) => (
               <p
                 key={index}
                 onClick={() => scrollToSection(item.id)}
-                className="
-                group px-4 rounded-full cursor-pointer
-                transition-all duration-300
-                hover:bg-myblue-50
-                hover:text-myblue-600
-                hover:scale-110
-                active:scale-95
-              "
+                className="group rounded-full cursor-pointer transition-all duration-300 hover:text-myblue-600 hover:scale-110 active:scale-95 sm:text-center"
               >
                 <span className="transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(77,135,255,0.7)]">
                   {item.label}
