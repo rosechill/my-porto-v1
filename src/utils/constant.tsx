@@ -1,4 +1,5 @@
 export const sertifImages = [
+  { sertifImage: '/certificate/s10.jpg' },
   { sertifImage: '/certificate/s8.jpeg' },
   { sertifImage: '/certificate/s3.jpeg' },
   { sertifImage: '/certificate/s4.jpeg' },
