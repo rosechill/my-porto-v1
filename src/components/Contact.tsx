@@ -10,7 +10,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import SectionTitle from './SectionTitle'
 import animationData from '../../public/lotties/contact.json'
 import Lottie from 'react-lottie'
-import { useIsMobile } from '../hooks/useIsMobile'
+import { useResponsive } from '../hooks/useResponsive'
 
 const schema = yup.object({
   name: yup.string().required('Nama harus diisi').min(3, 'Masukkan Nama yang valid'),
@@ -22,7 +22,7 @@ const schema = yup.object({
 
 export default function ContactHeaderSection() {
   const [loading, setLoading] = useState(false)
-  const isMobile = useIsMobile()
+  const { isMobile } = useResponsive()
 
   const notify = () =>
     toast.success('Berhasil mengirimkan formulir', {

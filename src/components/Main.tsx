@@ -8,10 +8,17 @@ import Footer from '../components/Footer'
 import ProjectV2 from '../components/ProjectV2'
 import Certificate from '../components/Certificate'
 import BackToTop from '../components/BackToTop'
+import { useResponsive } from '../hooks/useResponsive'
+import ResponsiveWarningModal from './ResponsiveWarningModal'
 
 export default function Main() {
-  const [show, setShow] = useState(false)
+  const { isTabletOrMobile } = useResponsive()
 
+  const [show, setShow] = useState(false)
+  const [hasShownWarning, setHasShownWarning] = useState(false)
+
+  const isWarningModalShow = isTabletOrMobile && !hasShownWarning
+  
   useEffect(() => {
     const handleScroll = () => {
       setShow(window.scrollY > 200)
@@ -48,6 +55,7 @@ export default function Main() {
       <ContactHeaderSection />
       <Footer />
       {show && <BackToTop />}
+      {isWarningModalShow && <ResponsiveWarningModal onCloseModal={() => setHasShownWarning(true)} />}
     </div>
   )
 }

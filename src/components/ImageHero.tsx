@@ -4,11 +4,11 @@ import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import animationData from '../../public/lotties/hero.json'
 import Lottie from 'react-lottie'
-import { useIsMobile } from '../hooks/useIsMobile'
+import { useResponsive } from '../hooks/useResponsive'
 
 const ImageHero = () => {
   const imageRef = useRef<HTMLImageElement | null>(null)
-  const isMobile = useIsMobile()
+  const { isMobile } = useResponsive()
 
   useEffect(() => {
     if (imageRef.current) {

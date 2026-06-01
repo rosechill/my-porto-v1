@@ -12,3 +12,7 @@ export type BlurredModalProps = {
   selectedImage: string | null
   setImage: Dispatch<SetStateAction<string | null>>
 }
+
+export type WarniningModalProps = {
+  onCloseModal: () => void
+}
