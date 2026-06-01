@@ -20,11 +20,11 @@ export default function PortfolioSection() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-white/10">
+            <div className="rounded-2xl overflow-hidden border border-white/10 bg-white">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[220px] md:h-[300px] lg:h-[320px] object-cover cursor-pointer"
+                className="w-full h-[220px] md:h-[300px] lg:h-[320px] md:object-cover object-contain cursor-pointer"
                 loading="lazy"
                 onClick={() => setSelectedImage(project.image)}
               />
