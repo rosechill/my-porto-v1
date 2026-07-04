@@ -27,7 +27,7 @@ const Certificate = () => {
     speed: 500,
     slidesToShow: isMobile ? 1 : 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: isMobile ? 3000 : 2000,
     cssEase: 'linear',
   }
