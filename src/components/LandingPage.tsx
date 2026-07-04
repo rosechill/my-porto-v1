@@ -115,8 +115,8 @@ const index = () => {
                 </div>
                 <div className=" w-full h-full flex flex-col gap-5 z-10 items-end justify-center me-5 text-container2">
                   <h2 className="xl:text-3xl text-xl  text-mynavy">Passionate</h2>
-                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Front-End</h2>
-                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Developer</h2>
+                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Software</h2>
+                  <h2 className="xl:text-6xl text-3xl font-extrabold text-mynavy">Engineer</h2>
                   <DownloadResume />
                 </div>
               </React.Fragment>
@@ -137,7 +137,7 @@ const index = () => {
           </div>
           <div className="flex flex-col text-center items-center gap-4 pt-4">
             <h2 className="text-lg text-mynavy">Passionate</h2>
-            <h2 className="text-2xl font-extrabold text-mynavy">Front-End Developer</h2>
+            <h2 className="text-2xl font-extrabold text-mynavy">Software Engineer</h2>
             <DownloadResume />
           </div>
         </div>
