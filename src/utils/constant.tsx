@@ -1,15 +1,15 @@
 export const sertifImages = [
-  { sertifImage: '/certificate/s11.jpg' },
-  { sertifImage: '/certificate/s10.jpg' },
-  { sertifImage: '/certificate/s8.jpeg' },
-  { sertifImage: '/certificate/s3.jpeg' },
-  { sertifImage: '/certificate/s4.jpeg' },
-  { sertifImage: '/certificate/s5.jpeg' },
-  { sertifImage: '/certificate/s6.jpeg' },
-  { sertifImage: '/certificate/s7.jpeg' },
-  { sertifImage: '/certificate/s1.jpeg' },
-  { sertifImage: '/certificate/s2.jpeg' },
-  { sertifImage: '/certificate/s12.png' },
+  { sertifImage: '/certificate/s11.webp' },
+  { sertifImage: '/certificate/s10.webp' },
+  { sertifImage: '/certificate/s8.webp' },
+  { sertifImage: '/certificate/s3.webp' },
+  { sertifImage: '/certificate/s4.webp' },
+  { sertifImage: '/certificate/s5.webp' },
+  { sertifImage: '/certificate/s6.webp' },
+  { sertifImage: '/certificate/s7.webp' },
+  { sertifImage: '/certificate/s1.webp' },
+  { sertifImage: '/certificate/s2.webp' },
+  { sertifImage: '/certificate/s12.webp' },
 ]
 
 export const projects = [
