@@ -9,7 +9,7 @@ export const sertifImages = [
   { sertifImage: '/certificate/s7.jpeg' },
   { sertifImage: '/certificate/s1.jpeg' },
   { sertifImage: '/certificate/s2.jpeg' },
-  { sertifImage: '/certificate/s11.png' },
+  { sertifImage: '/certificate/s12.png' },
 ]
 
 export const projects = [
