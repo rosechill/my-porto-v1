@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-4 pb-6">
         <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold">Bagas Adytia</h3>
-          <p className="text-sm opacity-70">Frontend Developer</p>
+          <p className="text-sm opacity-70">Software Engineer</p>
         </div>
         <div className="flex gap-4 text-sm opacity-80 flex-col">
           <div className="grid sm:grid-cols-4 grid-cols-2 sm:gap-x-4 sm:gap-y-4 gap-x-8 gap-y-4 justify-center items-center">
