@@ -15,22 +15,6 @@ const index = () => {
   const [ready, setReady] = useState(false)
 
   const doAnimation = () => {
-    gsap.set('.transition-image', { scale: 1 })
-
-    gsap.fromTo(
-      '.transition-image',
-      {
-        ease: 'power4.inOut',
-        scale: 1.5,
-        opacity: 0,
-      },
-      {
-        delay: 0.5,
-        scale: 1,
-        opacity: 1,
-      }
-    )
-
     gsap.set('.text-container', { opacity: 0 })
 
     gsap.fromTo(
@@ -65,17 +49,6 @@ const index = () => {
       }
     )
 
-    gsap.fromTo(
-      '.section1',
-      {
-        scale: 1.5,
-      },
-      {
-        scale: 1,
-        duration: 1.5,
-        ease: 'power4.inOut',
-      }
-    )
   }
 
   useLayoutEffect(() => {
