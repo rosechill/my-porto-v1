@@ -40,17 +40,36 @@ const Certificate = () => {
     </div>
   ))
 
+  const NextArrow = ({ onClick }: any) => (
+    <button
+      onClick={onClick}
+      className="absolute top-1/2 -translate-y-1/2right-2 md:right-[-50px] w-10 h-10 rounded-full bg-[#151B54] text-white z-20"
+    >
+      ❯
+    </button>
+  )
+
+  const PrevArrow = ({ onClick }: any) => (
+    <button
+      onClick={onClick}
+      className=" absolute top-1/2 -translate-y-1/2 left-2 md:left-[-50px] w-10 h-10 rounded-full bg-[#151B54] text-white z-20"
+    >
+      ❮
+    </button>
+  )
   return (
     <div className="flex flex-col justify-center items-center" id="section3">
       <SectionTitle title="Certificates" />
       <div className="w-[80%] h-auto items-center mb-10 outline-none">
         <Slider
           dots={true}
-          infinite={true}
+          arrows={!isMobile}
+          infinite={false}
           slidesToShow={isMobile ? 1 : 3}
           slidesToScroll={1}
           autoplay={false}
-          
+          nextArrow={<NextArrow />}
+          prevArrow={<PrevArrow />}
         >
           {data}
         </Slider>
